@@ -1,18 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
-	<local_port>1080</local_port>
+	<local_port>1081</local_port>
 	<remotes>
 		<remote>
-			<ip_addr>xxxxxx</ip_addr>
-			<port>443</port>
+			<ip_addr>vps.wiwikiky.top</ip_addr>
+			<port>1313</port>
 			<method>aes-256-cfb</method>
-			<password>xxxx</password>
-		</remote>
-		<remote>
-			<ip_addr>xxxxx</ip_addr>
-			<port>443</port>
-			<method>aes-256-cfb</method>
-			<password>xxx</password>
+			<password>123456</password>
 		</remote>
 	</remotes>
 </config>

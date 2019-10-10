@@ -1,16 +1,16 @@
 package org.netty.manager;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.net.telnet.TelnetClient;
 import org.netty.config.Config;
 import org.netty.config.RemoteServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 远程服务器管理器
@@ -90,6 +90,7 @@ public class RemoteServerManager {
 			TelnetClient client = new TelnetClient();
 			client.setDefaultTimeout(3000);
 			client.connect(remoteServer.get_ipAddr(), remoteServer.get_port());
+			logger.info("remote server: {}:{} telnet success",remoteServer.get_ipAddr(), remoteServer.get_port());
 			return true;
 		} catch (Exception e) {
 			logger.warn("remote server: " + remoteServer.toString() + " telnet failed");
